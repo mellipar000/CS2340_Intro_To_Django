@@ -1,3 +1,6 @@
 from django.shortcuts import render
 
-# Create your views here.
+def index(request):
+    # renders templates & returns HTTP response  w/ content
+    return render(request, 'home/index.html')
+    # request = HTTP request, home/index.html =  path to template file
