@@ -21,4 +21,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('home.urls')), # '' = base url
     # include('home.urls') = include all urls in home.urls
+    path('movies/', include('movies.urls')),
 ]
