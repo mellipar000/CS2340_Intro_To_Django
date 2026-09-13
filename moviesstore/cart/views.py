@@ -26,7 +26,8 @@ def add(request, id):
     return redirect('cart.index')
 def clear(request):
     request.session['cart'] = {}
-    return redirect('cart.index')@login_required
+    return redirect('cart.index')
+@login_required
 def purchase(request):
     cart = request.session.get('cart', {})
     movie_ids = list(cart.keys())
